@@ -4,7 +4,7 @@ import time
 #1 Abrir o SAP
 
 time.sleep(2)
-pyautogui.click(x=867, y=1179)
+pyautogui.click(x=511, y=1170)
 
 #2 Entrar no PS0
 
@@ -22,19 +22,19 @@ time.sleep(0.25)
 pyautogui.press("down")
 time.sleep(0.25)
 pyautogui.press("enter")
-time.sleep(0.25)
-
-
-pyautogui.press("down")
+time.sleep(0.1)
+pyautogui.press("enter")
 time.sleep(1)
 pyautogui.press("enter")
+#pesquisar mb51
 
 #3 Abrir a MB51
 
 time.sleep(10)
-pyautogui.click(x=220, y=156)
+pyautogui.click(x=125, y=148)
 time.sleep(1)
 pyautogui.write("mb51")
+time.sleep(0.25)
 pyautogui.press("enter")
 
 #4 Chamar a variante /BOTVSO 
@@ -42,7 +42,7 @@ pyautogui.press("enter")
 time.sleep(8)
 pyautogui.hotkey("shift","f5")
 time.sleep(1)
-pyautogui.write("BOT_VSO")
+pyautogui.write("")
 time.sleep(1)
 pyautogui.press("tab")
 pyautogui.press("tab")
