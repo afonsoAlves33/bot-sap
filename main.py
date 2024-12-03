@@ -2,7 +2,11 @@ import pyautogui
 import time
 
 
-def save_excel_sheet(excel_sheet_name: str ,variant: str = "FPG_FATURMENTO", saving_path: str = r"\\bosch.com\dfsrb\DfsBR\loc\Ca1\ED\mse\MOE1\Dados\Planejamento_Tecnico\19 - Dados_BI_online\03 - Base de dados\teste_bot"):
+def save_excel_sheet(excel_sheet_name: str, variant: str = "FPG_FATURMENTO", code: str = "mb51", saving_path: str = r"\\bosch.com\dfsrb\DfsBR\loc\Ca1\ED\mse\MOE1\Dados\Planejamento_Tecnico\19 - Dados_BI_online\03 - Base de dados\teste_bot"):
+    """
+    Saves a excel spreadsheet by following a default route on SAP
+    """
+    
     pyautogui.click(x=511, y=1170)
 
     # Maximizando a tela
@@ -29,7 +33,7 @@ def save_excel_sheet(excel_sheet_name: str ,variant: str = "FPG_FATURMENTO", sav
     time.sleep(10)
     pyautogui.click(x=125, y=148)
     time.sleep(1)
-    pyautogui.write("mb51")
+    pyautogui.write(code)
     time.sleep(0.25)
     pyautogui.press("enter")
 
@@ -73,4 +77,5 @@ def save_excel_sheet(excel_sheet_name: str ,variant: str = "FPG_FATURMENTO", sav
     print("done")
 
 if __name__ == "__main__":
-    save_excel_sheet(excel_sheet_name="teste.xlsx")
+    save_excel_sheet(excel_sheet_name="testeProducao.xlsx", variant="FPG_PROD")
+    # s_alr_87013625
