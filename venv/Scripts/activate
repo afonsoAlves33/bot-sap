@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\dev\em\bot-excel\venv"
+VIRTUAL_ENV="C:\Users\sfo9ca\Desktop\bot-sap-main\venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

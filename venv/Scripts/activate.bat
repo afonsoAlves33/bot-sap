@@ -8,7 +8,7 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-set VIRTUAL_ENV=C:\dev\em\bot-excel\venv
+set VIRTUAL_ENV=C:\Users\sfo9ca\Desktop\bot-sap-main\venv
 
 if not defined PROMPT set PROMPT=$P$G
 
