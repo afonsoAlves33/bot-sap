@@ -1,5 +1,6 @@
 import pyautogui
 import time
+from window_manager import WindowManager
 
 
 def save_excel_sheet(excel_sheet_name: str, variant: str, code: str = "mb51", saving_path: str = r"\\bosch.com\dfsrb\DfsBR\loc\Ca1\ED\mse\MOE1\Dados\Planejamento_Tecnico\19 - Dados_BI_online\03 - Base de dados\teste_bot"):
@@ -9,10 +10,10 @@ def save_excel_sheet(excel_sheet_name: str, variant: str, code: str = "mb51", sa
     # time.sleep(5)
     # print(pyautogui.position())
     # time.sleep(3)
-    # pyautogui.click(x=339, y=741)
+    pyautogui.click(x=339, y=741)
 
-    # # Maximizando a tela
-    # time.sleep(10)
+    # Maximizando a tela
+    time.sleep(10)
     # pyautogui.press("f10")
     # time.sleep(0.5)
     # pyautogui.press("down")
@@ -27,30 +28,32 @@ def save_excel_sheet(excel_sheet_name: str, variant: str, code: str = "mb51", sa
     # time.sleep(0.5)
     # pyautogui.press("enter")
     # time.sleep(1)
-    # pyautogui.press("enter")
-    # time.sleep(1)
-    # pyautogui.press("enter")
+    WindowManager.focus_window_by_title("SAP Logon 800")
+    WindowManager.maximize_window_by_title("SAP Logon 800")
+    pyautogui.press("enter")
+    time.sleep(1)
+    pyautogui.press("enter")
 
-    # # Abrir a MB51
-    # time.sleep(10)
-    # # pyautogui.click(x=125, y=148)
-    # # time.sleep(1)
-    # pyautogui.write(code)
+    # Abrir a MB51
+    time.sleep(10)
+    # pyautogui.click(x=125, y=148)
     # time.sleep(1)
-    # pyautogui.press("enter")
+    pyautogui.write(code)
+    time.sleep(1)
+    pyautogui.press("enter")
 
-    # # Chamar a variante
-    # time.sleep(8)
-    # pyautogui.hotkey("shift","f5")
-    # time.sleep(2)
-    # pyautogui.write(variant)
-    # time.sleep(1)
-    # pyautogui.press("enter")
-    # time.sleep(1)
-    # pyautogui.press("F8")
+    # Chamar a variante
+    time.sleep(8)
+    pyautogui.hotkey("shift","f5")
+    time.sleep(2)
+    pyautogui.write(variant)
+    time.sleep(1)
+    pyautogui.press("enter")
+    time.sleep(1)
+    pyautogui.press("F8")
 
-    # # Selecionar como lista detalhada
-    # time.sleep(150)
+    # Selecionar como lista detalhada
+    time.sleep(150)
     time.sleep(9)
     pyautogui.hotkey("shift","F7")
     time.sleep(3)
